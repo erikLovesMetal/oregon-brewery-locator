@@ -1,0 +1,22 @@
+== Brewery Locator App
+
+Rails app that has a admin tool that manages the lat/longs of all the breweries in Oregon.
+
+* Ruby v2.0 / Rails 4
+
+* beermapping api (http://beermapping.com/api/) maybe?... doesnt seem to have them all
+
+* Google Maps API
+
+* Sqlite locally / PostGresSQL production
+
+* Database initialization
+
+* Add TDD ..
+
+* AngularJS (try and find excuse to use..) angular-maps plugin?
+
+* Deployed to Heroku
+
+* make the map responsive so it works on mobile
+

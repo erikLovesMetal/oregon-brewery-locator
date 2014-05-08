@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @brewery.name %>
+</p>
+
+<p>
+  <strong>Notes:</strong>
+  <%= @brewery.notes %>
+</p>
+
+<p>
+  <strong>Lat:</strong>
+  <%= @brewery.lat %>
+</p>
+
+<p>
+  <strong>Long:</strong>
+  <%= @brewery.long %>
+</p>
+
+<%= link_to 'Edit', edit_brewery_path(@brewery) %> |
+<%= link_to 'Back', breweries_path %>
