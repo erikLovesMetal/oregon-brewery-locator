@@ -4,7 +4,7 @@ source 'https://rubygems.org'
 gem 'rails', '4.0.0'
 
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+gem 'sqlite3', group: :development
 
 gem 'pg'
 
@@ -42,7 +42,7 @@ end
 
 gem 'rails_12factor', group: :production
 
-# ruby "2.1.1"
+ruby "2.1.1", group: :production
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
