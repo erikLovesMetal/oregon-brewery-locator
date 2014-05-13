@@ -14,6 +14,7 @@
 //= require jquery_ujs
 //= require bootstrap.min
 //= require underscore-min
+//= require underscore-min.map
 //= require angular
 //= require leaflet/leaflet
 //= require leaflet/layer/tile/Google
