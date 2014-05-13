@@ -17,6 +17,5 @@
 //= require angular
 //= require leaflet/leaflet
 //= require leaflet/layer/tile/Google
-//= require map
 
 app = angular.module('app', ['leaflet-directive'])
