@@ -6,13 +6,21 @@ app.controller('IndexCtrl', ['$scope','$http', function ($scope,$http) {
     success(function(data, status, headers, config) {
       // this callback will be called asynchronously
       // when the response is available
-      console.log(status);
-      console.log(data);
+      results = [];
+      $(data).each(function(index){
+        // console.log(this.lat + ' - ' + this.long);
+        item = 'm' + index + ':{lat:' + this.lat + ',lng:' + this.long + ',message:' + this.name + '}'
+        console.log(item);
+        // results.push(item);
+        // results.add({lat: this.lat,lng:this.long,message:'shit'})
+      });
+      console.log(results);    
     }).
     error(function(data, status, headers, config) {
       // called asynchronously if an error occurs
       // or server returns response with an error status.
       console.log(status);
+
     });
 
   angular.extend($scope, {
