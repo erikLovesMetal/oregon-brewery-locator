@@ -22,6 +22,5 @@ module BreweryLocator
     config.assets.precompile += [
       'map.js'
     ]
-
   end
 end

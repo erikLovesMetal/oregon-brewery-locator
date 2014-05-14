@@ -18,5 +18,4 @@
 //= require leaflet/leaflet
 //= require leaflet/layer/tile/Google
 
-console.log('right project?');
 app = angular.module('app', ['leaflet-directive'])
