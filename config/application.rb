@@ -22,5 +22,7 @@ module BreweryLocator
     config.assets.precompile += [
       'map.js'
     ]
+    # config.assets.paths << "/app/assets/stylesheets/leaflet/fonts"
+    # config.assets.paths << "#{Rails}/vendor/assets/fonts"
   end
 end

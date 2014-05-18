@@ -42,6 +42,10 @@ end
 
 gem 'rails_12factor', group: :production
 
+gem 'geocoder'
+
+gem "font-awesome-rails"
+
 # ruby "2.1.1", group: :production
 
 # Use ActiveModel has_secure_password

@@ -1,22 +1,24 @@
-app.controller('IndexCtrl', ['$scope','$http','leafletData', function ($scope,$http,leafletData) {
+app.controller('IndexCtrl', ['$scope','$http','leafletData','GeolocationService', function ($scope,$http,leafletData,geolocation) {
   $scope.position = null;
   $scope.message = "Determining gelocation...";
-  leafletData.getMap('map2').then(function(map){
-    $scope.map = map;
-    console.log($scope);
-    // $log.info(map);
-  })
   $scope.results = {};
+  // TODO .. ADD A SPINNER/LOADING ICON WHILE LOADING GEOLOCATION
+  // NOTE GEOLOCATION SERVICE BEING INJECTED.. BUT NOT USED... LEAFLET WILL AUTODISCOVER IT!
+
+  // when we have our coords then plot a marker for us
+  $scope.$on('leafletDirectiveMap.locationfound', function(event){
+        $scope.eventDetected = "location!";
+        console.log($scope.centerPoint.lat);
+        console.log($scope.centerPoint.lng);
+        $scope.results['x']={lat:parseFloat($scope.centerPoint.lat),lng: parseFloat($scope.centerPoint.lng),message: 'You Are Here',focus:true};
+    });
+
+  // plot some breweries!...
   $http({method: 'GET', url: 'map/getBreweryCoords'}).
     success(function(data, status, headers, config) {
       // this callback will be called asynchronously
       // when the response is available
-      
       $(data).each(function(index){
-        // console.log(this.lat + ' - ' + this.long);
-        // item = 'm' + index + ':{lat:' + this.lat + ',lng:' + this.long + ',message:' + this.name + '}'
-        item = '{lat:' + this.lat + ',lng:' + this.long + ',message:' + this.name + '}'
-        // results.push(item);
         if( this.lat != 0.0 && this.long != 0.0){
           $scope.results['m' + index]={lat:parseFloat(this.lat),lng: parseFloat(this.long),message: this.name};
         }
@@ -30,15 +32,10 @@ app.controller('IndexCtrl', ['$scope','$http','leafletData', function ($scope,$h
 
   angular.extend($scope, {
     centerPoint: {
-      zoom: 14,
-      autoDiscover: true
+      zoom: 18,
+      autoDiscover: true,
+      focus:true
     },
-    // markers: {
-    //   m1: {
-    //     lat: 45.5488529,
-    //     lng: -122.65955079999999
-    //   }
-    // },
     markers: $scope.results,
     layers: {
       baselayers: {

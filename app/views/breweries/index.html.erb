@@ -3,7 +3,7 @@
     <div class="row">
         <div class="col-lg-12" >
             <div class="page-header">
-                <h1>Breweries</h1>
+                <h1>Breweries (<%= @breweries.count %>)</h1>
             </div>
         </div>
     </div>
@@ -19,7 +19,7 @@
                 <thead>
                     <tr>
                         <th>Name</th>
-                        <th>Notes</th>
+                        <th>Address</th>
                         <th>Lat</th>
                         <th>Long</th>
                     </tr>
@@ -28,7 +28,7 @@
                   <% @breweries.each do |brewery| %>
                     <tr>
                       <td><%= brewery.name %></td>
-                      <td><%= brewery.notes %></td>
+                      <td><%= brewery.address %> <%= brewery.city %>, <%= brewery.state %></td>
                       <td><%= brewery.lat %></td>
                       <td><%= brewery.long %></td>
                       <td><%= link_to 'Show', brewery %></td>
@@ -37,6 +37,17 @@
                     </tr>
                   <% end %>
                 </tbody>
+
+
+                <tbody>
+                  Within 10 - <%=  @withinTen.count %>
+                  <% @withinTen.each do |b| %>
+                    <tr>
+                      <td><%= b.name %></td>
+                    </tr>
+                  <% end %>
+                </tbody>
+
             </table>
         </div>
     </div>

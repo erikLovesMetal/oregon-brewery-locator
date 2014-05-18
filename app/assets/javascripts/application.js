@@ -17,5 +17,7 @@
 //= require angular
 //= require leaflet/leaflet
 //= require leaflet/layer/tile/Google
+//= require respond.min
+//= require html5shiv
 
-app = angular.module('app', ['leaflet-directive'])
+app = angular.module('app', ['leaflet-directive']);

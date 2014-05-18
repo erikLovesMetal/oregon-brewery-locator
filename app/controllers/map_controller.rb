@@ -1,7 +1,7 @@
 class MapController < ApplicationController
 
 	def index()
-		
+		# puts location.methods
 	end
 
 	def getBreweryMarkerCoords()

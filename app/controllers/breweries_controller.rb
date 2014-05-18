@@ -6,6 +6,9 @@ class BreweriesController < ApplicationController
   # GET /breweries.json
   def index
     @breweries = Brewery.all
+    r = Brewery.near("3532 NE 6th Ave Portland, OR", 1)
+    @withinTen = r.all
+    # puts r.all
   end
 
   # GET /breweries/1
@@ -63,9 +66,10 @@ class BreweriesController < ApplicationController
   end
 
   def importBreweriesFromAPI()
-    result = Brewery.importBreweriesFromAPI()
-    # puts result.to_s
-    render nothing:true
+    @importTotal = Brewery.importBreweriesFromAPI()
+    # puts importTotal.to_s
+    redirect_to breweries_url,notice: 'Breweries Imported.'
+    # render nothing:true
   end
 
   private
