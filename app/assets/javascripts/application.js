@@ -17,7 +17,10 @@
 //= require angular
 //= require leaflet/leaflet
 //= require leaflet/layer/tile/Google
+//= require leaflet/leaflet.zoomdisplay-src
+//= require leaflet/leaflet.control.sidebar
 //= require respond.min
 //= require html5shiv
+
 
 app = angular.module('app', ['leaflet-directive']);

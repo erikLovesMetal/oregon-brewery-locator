@@ -1,9 +1,26 @@
-app.controller('IndexCtrl', ['$scope','$http','leafletData','GeolocationService', function ($scope,$http,leafletData,geolocation) {
+app.controller('IndexCtrl', ['$scope','$http','leafletData','GeolocationService','leafletEvents', function ($scope,$http,leafletData,geolocation,leafletEvents) {
   $scope.position = null;
   $scope.message = "Determining gelocation...";
   $scope.results = {};
   // TODO .. ADD A SPINNER/LOADING ICON WHILE LOADING GEOLOCATION
   // NOTE GEOLOCATION SERVICE BEING INJECTED.. BUT NOT USED... LEAFLET WILL AUTODISCOVER IT!
+
+  // get the map leaflet object and add the sidebar to controls
+  leafletData.getMap().then(function(map) {
+    $scope.sidebar = L.control.sidebar("sidebar", {
+      closeButton: true,
+      position: "left"
+    });
+    console.log(map);
+    map._layersMaxZoom=20;
+    map.options.maxZoom=20;
+    map.addControl($scope.sidebar);
+  });
+
+  // toggle the sidebar... wonder if there is a sexier angular way to detect click... $on ?...
+  $scope.sidebarToggle = function(){
+    $scope.sidebar.toggle();
+  }
 
   // when we have our coords then plot a marker for us
   $scope.$on('leafletDirectiveMap.locationfound', function(event){
@@ -31,28 +48,40 @@ app.controller('IndexCtrl', ['$scope','$http','leafletData','GeolocationService'
     });
 
   angular.extend($scope, {
-    centerPoint: {
-      zoom: 18,
-      autoDiscover: true,
-      focus:true
+    defaults: {
+       // tileLayer: "http://a.tiles.mapbox.com/v3/mapbox.world-light/{z}/{x}/{y}.png",
+       // scrollWheelZoom: true,
+       maxZoom:20,
+       doubleClickZoom:true,
+       // zoomAnimation:true,
+       markerZoomAnimation:true
     },
-    markers: $scope.results,
+    centerPoint: {
+      zoom: 13,
+      autoDiscover: true,
+      focus:false,
+      maxZoom:20
+    },
+    markers: $scope.results, //NOTE CANT ZOOM PAST 15 CAUSE ZOOM LIMIT ON GOOGLE TERRIAIN
     layers: {
       baselayers: {
         googleTerrain: {
           name: 'Google Terrain',
           layerType: 'TERRAIN',
-          type: 'google'
+          type: 'google',
+          maxZoom:20
         },
         googleHybrid: {
           name: 'Google Hybrid',
           layerType: 'HYBRID',
-          type: 'google'
+          type: 'google',
+          maxZoom:20
         },
         googleRoadmap: {
           name: 'Google Streets',
           layerType: 'ROADMAP',
-          type: 'google'
+          type: 'google',
+          maxZoom:20
         }
       }
     }

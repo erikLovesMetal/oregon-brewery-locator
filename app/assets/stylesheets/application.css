@@ -11,6 +11,8 @@
  *= require font-awesome
  *= require bootstrap.min
  *= require leaflet/leaflet
+ *= require leaflet/leaflet.zoomdisplay
+ *= require leaflet/leaflet.control.sidebar
  *= require_tree .
  *= require_self
  */
