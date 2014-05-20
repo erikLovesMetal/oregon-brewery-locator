@@ -37,7 +37,7 @@ app.controller('IndexCtrl', ['$scope','$http','leafletData','GeolocationService'
       // when the response is available
       $(data).each(function(index){
         if( this.lat != 0.0 && this.long != 0.0){
-          $scope.results['m' + index]={lat:parseFloat(this.lat),lng: parseFloat(this.long),message: this.name};
+          $scope.results['m' + index]={lat:parseFloat(this.lat),lng: parseFloat(this.long),name: this.name};
         }
       });
     }).
