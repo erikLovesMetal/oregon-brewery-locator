@@ -24,6 +24,7 @@ app.controller('IndexCtrl', ['$scope','$http','leafletData','GeolocationService'
 
   // when we have our coords then plot a marker for us
   $scope.$on('leafletDirectiveMap.locationfound', function(event){
+        $("#loading").hide();
         $scope.eventDetected = "location!";
         console.log($scope.centerPoint.lat);
         console.log($scope.centerPoint.lng);
