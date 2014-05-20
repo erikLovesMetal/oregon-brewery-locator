@@ -1,17 +1,15 @@
 oregon-brewery-locator
 ======================
 
-Mapping app that takes current location and maps breweries in vicinity.  Breweris are managed in a login protected admin section with a tool that allows managing the breweries and their lat/longs and information about them, might use the beermapping api to help populate.
+Mapping app that takes current location and maps breweries in vicinity.  Breweris are managed in a login protected admin section with a tool that allows managing the breweries and their lat/longs and information about them. The admin tool has import feature that imports most the breweries into the admin tool.  Also using geocoding to look up lat/longs of breweries that arent in beermapping API.  Can also manually add breweries.
 
 * Ruby v2.0 / Rails 4
 
-* beermapping api (http://beermapping.com/api/) maybe?... doesnt seem to have them all
+* beermapping api (http://beermapping.com/api/) doesnt seem to have them all
 
-* Google Maps API / Ruby geocoder gem (https://github.com/alexreisner/geocoder) for reverse geocoding
+* Ruby geocoder gem (https://github.com/alexreisner/geocoder) for reverse geocoding
 
 * Sqlite locally / PostGresSQL production
-
-* Database initialization
 
 * Add TDD ..
 
@@ -20,3 +18,5 @@ Mapping app that takes current location and maps breweries in vicinity.  Breweri
 * Deployed to Heroku
 
 * make the map responsive so it works on mobile USING LEAFLET.JS!!!!
+
+* Theme the map with Bootleaf theme
