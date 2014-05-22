@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html>
-<html ng-app="app">
+<html ng-app="app" lang="en">
 <head>
 	<meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,11 +8,20 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="description" content="">
     <meta name="author" content="">
-  <title>Oregon Brewery Locator</title>
-  <%= stylesheet_link_tag    "application", media: "all" %>
-  <script src="http://maps.google.com/maps/api/js?v=3.2&sensor=false"></script>
-  <%= javascript_include_tag "application", controller_name %>
-  <%= csrf_meta_tags %>
+  	<title>Oregon Brewery Locator</title>
+ 	<%= stylesheet_link_tag    "application", media: "all" %>
+  	<script src="http://maps.google.com/maps/api/js?v=3.2&sensor=false"></script>
+  	<%= javascript_include_tag "application", controller_name %>
+  	<%= csrf_meta_tags %>
+
+  	<link rel="apple-touch-icon" href="assets/img/favicon-152.png">
+    <link rel="shortcut icon" sizes="196x196" href="assets/img/favicon-196.png">
+
+  	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="assets/js/html5shiv.js"></script>
+        <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
 </head>
 <body>
 
