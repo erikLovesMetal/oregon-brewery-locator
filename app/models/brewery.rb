@@ -12,7 +12,6 @@ class Brewery < ActiveRecord::Base
 		items = root.xpath("//location")
 		counter = 0
 		items.each do |i|
-			puts i.to_s
 			if i.at_xpath("status").text == 'Brewpub' or i.at_xpath("status").text == 'Brewery' or i.at_xpath("status").text == 'Beer Bar'
 				counter += 1
 				coords = Nokogiri::XML(open("http://beermapping.com/webservice/locmap/05a1a701dca974e16978f0c9027709b1/#{i.at_xpath("id").text}"))
