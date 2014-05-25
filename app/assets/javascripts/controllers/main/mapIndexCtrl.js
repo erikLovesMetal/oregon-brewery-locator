@@ -7,6 +7,7 @@ app.controller('IndexCtrl', ['$scope','$http','leafletData','GeolocationService'
 
   // get the map leaflet object and add the sidebar to controls
   leafletData.getMap().then(function(map) {
+    console.log('hello');
     $scope.sidebar = L.control.sidebar("sidebar", {
       closeButton: true,
       position: "left"
@@ -18,6 +19,7 @@ app.controller('IndexCtrl', ['$scope','$http','leafletData','GeolocationService'
 
   // toggle the sidebar... wonder if there is a sexier angular way to detect click... $on ?...
   $scope.sidebarToggle = function(){
+    console.log($scope);
     $scope.sidebar.toggle();
   }
 

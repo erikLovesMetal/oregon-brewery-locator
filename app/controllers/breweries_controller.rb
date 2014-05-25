@@ -7,6 +7,7 @@ class BreweriesController < ApplicationController
   def index
     @breweries = Brewery.all
     r = Brewery.near("3532 NE 6th Ave Portland, OR", 1)
+    puts r.to_s
     @withinTen = r.all
     # puts r.all
   end
@@ -67,9 +68,17 @@ class BreweriesController < ApplicationController
 
   def importBreweriesFromAPI()
     @importTotal = Brewery.importBreweriesFromAPI()
-    # puts importTotal.to_s
     redirect_to breweries_url,notice: 'Breweries Imported.'
-    # render nothing:true
+  end
+
+  def deleteBreweries()
+    Brewery.delete_all()
+    redirect_to breweries_url,notice: 'Breweries Deleted.'
+  end
+
+  # check the state the user lat/long in 
+  def getCurrentUserState
+
   end
 
   private

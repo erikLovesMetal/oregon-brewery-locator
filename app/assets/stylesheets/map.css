@@ -1,8 +1,12 @@
 
 html, body, #map {
-  /*height: 100%;
-  width: 100%;
-  overflow: hidden;*/
+  position: absolute; 
+  top: 0;
+  left: 0; 
+  right: 0; 
+  bottom: 0; 
+  height: 100%;
+  overflow: hidden;
 }
 
 body {
@@ -133,7 +137,8 @@ input[type="radio"], input[type="checkbox"] {
   }
 }
 
-.angular-leaflet-map {
-  height: 900px;
+/*.angular-leaflet-map {
+  height: 100%;
   overflow: hidden;
 }
+*/

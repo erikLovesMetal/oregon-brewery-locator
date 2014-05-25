@@ -8,6 +8,7 @@ BreweryLocator::Application.routes.draw do
   root 'map#index'
 
   get 'map/getBreweryCoords' => 'map#getBreweryMarkerCoords'
+  get 'admin/deleteBreweries' => 'breweries#deleteBreweries'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
