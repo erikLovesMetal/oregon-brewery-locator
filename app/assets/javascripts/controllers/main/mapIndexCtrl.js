@@ -5,32 +5,29 @@ app.controller('IndexCtrl', ['$scope','$http','leafletData','GeolocationService'
   // TODO .. ADD A SPINNER/LOADING ICON WHILE LOADING GEOLOCATION
   // NOTE GEOLOCATION SERVICE BEING INJECTED.. BUT NOT USED... LEAFLET WILL AUTODISCOVER IT!
 
-  // get the map leaflet object and add the sidebar to controls
-  leafletData.getMap().then(function(map) {
-    console.log('hello');
-    $scope.sidebar = L.control.sidebar("sidebar", {
-      closeButton: true,
-      position: "left"
-    });
-    map._layersMaxZoom=20;
-    map.options.maxZoom=20;
-    map.addControl($scope.sidebar);
-  });
-
   // toggle the sidebar... wonder if there is a sexier angular way to detect click... $on ?...
   $scope.sidebarToggle = function(){
-    console.log($scope);
     $scope.sidebar.toggle();
   }
 
-  //when we have our coords then plot a marker for us
+  //when we have our current coords then plot a marker for us
   $scope.$on('leafletDirectiveMap.locationfound', function(event){
-        $("#loading").hide();
-        $scope.eventDetected = "location!";
-        console.log($scope.centerPoint.lat);
-        console.log($scope.centerPoint.lng);
-        $scope.results['x']={lat:parseFloat($scope.centerPoint.lat),lng: parseFloat($scope.centerPoint.lng),message: "You Are Here",focus:true};
+    //hide loader
+    $("#loading").hide();
+    // get the map leaflet object and add the sidebar to controls
+    leafletData.getMap().then(function(map) {
+      $scope.sidebar = L.control.sidebar("sidebar", {
+        closeButton: true,
+        position: "left"
+      });
+      map._layersMaxZoom=20;
+      map.options.maxZoom=20;
+      map.addControl($scope.sidebar);
     });
+    console.log($scope.centerPoint.lat);
+    console.log($scope.centerPoint.lng);
+    $scope.results['x']={lat:parseFloat($scope.centerPoint.lat),lng: parseFloat($scope.centerPoint.lng),message: "You Are Here",focus:true};
+  });
 
   $scope.events = {
     markers: {
@@ -47,7 +44,6 @@ app.controller('IndexCtrl', ['$scope','$http','leafletData','GeolocationService'
     $("#featureModal").modal("show");
     console.log($scope.markers[args.markerName]);
   });
-
 
   // plot some breweries!...
   $http({method: 'GET', url: 'map/getBreweryCoords'}).
