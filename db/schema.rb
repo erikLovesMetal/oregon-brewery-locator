@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140515200546) do
+ActiveRecord::Schema.define(version: 20140602062633) do
 
   create_table "breweries", force: true do |t|
     t.string   "name"
@@ -26,6 +26,7 @@ ActiveRecord::Schema.define(version: 20140515200546) do
     t.string   "address"
     t.string   "city"
     t.string   "state"
+    t.boolean  "is_active",   default: true
   end
 
 end

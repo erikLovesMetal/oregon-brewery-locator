@@ -1,0 +1,732 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"LIn",
+				"LinkedIn"
+			],
+			[
+				"is",
+				"is_active"
+			],
+			[
+				"bre",
+				"brewery"
+			],
+			[
+				"within",
+				"withinTen"
+			],
+			[
+				"delete",
+				"deleteBreweries"
+			],
+			[
+				"click",
+				"clickable"
+			],
+			[
+				"girl",
+				"girl4"
+			],
+			[
+				"gril",
+				"girl3"
+			],
+			[
+				"fa",
+				"false"
+			],
+			[
+				"max",
+				"maxZoom"
+			],
+			[
+				"con",
+				"console"
+			],
+			[
+				"cener",
+				"centerPoint"
+			],
+			[
+				"re",
+				"results"
+			],
+			[
+				"center",
+				"centerPoint"
+			],
+			[
+				"app",
+				"application"
+			],
+			[
+				"ln",
+				"link2"
+			],
+			[
+				"impo",
+				"importBreweriesFromAPI"
+			],
+			[
+				"bewer",
+				"breweries"
+			],
+			[
+				"st",
+				"style	Tag"
+			],
+			[
+				"brew",
+				"breweries"
+			],
+			[
+				"cns",
+				"console"
+			],
+			[
+				"parse",
+				"parse_submit"
+			],
+			[
+				"fiel",
+				"fileExtension"
+			],
+			[
+				"cons",
+				"console"
+			],
+			[
+				"ins",
+				"inspect"
+			],
+			[
+				"fal",
+				"flash"
+			],
+			[
+				"boo",
+				"bookmark"
+			],
+			[
+				"book",
+				"bookmark"
+			],
+			[
+				"print",
+				"print_two"
+			],
+			[
+				"arg",
+				"arg2"
+			],
+			[
+				"ches",
+				"cheese_and_crackers"
+			],
+			[
+				"boxes",
+				"boxes_of_crackers"
+			],
+			[
+				"login",
+				"login_required"
+			],
+			[
+				"log",
+				"angular: $log.log"
+			],
+			[
+				"s",
+				"stringify"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"clear",
+				"clearPlaylist"
+			],
+			[
+				"lo",
+				"log"
+			],
+			[
+				"Song",
+				"SongModel"
+			],
+			[
+				"song",
+				"songview"
+			],
+			[
+				"local",
+				"localStorage"
+			],
+			[
+				"wid",
+				"width:450px"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "/Users/erikruthven/Documents/uno/partials/social.hbs",
+			"settings":
+			{
+				"buffer_size": 2306,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/erikruthven/Documents/uno/default.hbs",
+			"settings":
+			{
+				"buffer_size": 2040,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 374.0,
+		"selected_items":
+		[
+			[
+				"pack",
+				"Package Control: Install Package"
+			],
+			[
+				"Snippet: jQ",
+				"Snippet: jQuery AJAX call"
+			],
+			[
+				"Snippet: jq",
+				"Snippet: jQuery AJAX call"
+			],
+			[
+				"pa",
+				"Package Control: Install Package"
+			],
+			[
+				"packa",
+				"Package Control: Install Package"
+			],
+			[
+				"pac",
+				"Package Control: Install Package"
+			],
+			[
+				"packag",
+				"Package Control: List Packages"
+			],
+			[
+				"Snippet: ",
+				"Snippet: #!/usr/bin/env"
+			],
+			[
+				"",
+				"Cheat Sheet: Bash"
+			],
+			[
+				"p",
+				"Package Control: Remove Package"
+			],
+			[
+				"pacl",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 489.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); open(os.path.join(ipp, pf), 'wb').write(urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ','%20')).read())"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/erikruthven/Documents/oregon-brewery-locator/Gemfile",
+		"/Users/erikruthven/Documents/oregon-brewery-locator/db/migrate/20140602062633_add_is_active_to_breweries.rb",
+		"/Users/erikruthven/Documents/oregon-brewery-locator/app/views/layouts/admin.html.erb",
+		"/Users/erikruthven/Documents/oregon-brewery-locator/config/routes.rb",
+		"/Users/erikruthven/Documents/oregon-brewery-locator/app/controllers/breweries_controller.rb",
+		"/Users/erikruthven/Documents/oregon-brewery-locator/app/assets/javascripts/breweries.js",
+		"/Users/erikruthven/Documents/oregon-brewery-locator/app/assets/javascripts/application.js",
+		"/Users/erikruthven/Documents/oregon-brewery-locator/app/views/admin/index.html.erb",
+		"/Users/erikruthven/Documents/oregon-brewery-locator/app/assets/javascripts/controllers/main/mapIndexCtrl.js",
+		"/Users/erikruthven/Documents/oregon-brewery-locator/app/assets/javascripts/map.js.coffee",
+		"/Users/erikruthven/Documents/oregon-brewery-locator/app/assets/stylesheets/application.css",
+		"/Users/erikruthven/Documents/oregon-brewery-locator/app/assets/stylesheets/map.css",
+		"/Users/erikruthven/Documents/oregon-brewery-locator/app/views/map/index.html.erb",
+		"/Users/erikruthven/Documents/oregon-brewery-locator/README.md",
+		"/Users/erikruthven/Documents/oregon-brewery-locator/app/views/layouts/application.html.erb",
+		"/Users/erikruthven/Documents/oregon-brewery-locator/app/models/brewery.rb",
+		"/Users/erikruthven/Documents/oregon-brewery-locator/app/views/breweries/index.html.erb",
+		"/Users/erikruthven/Downloads/bootleaf-master/index.html",
+		"/Users/erikruthven/Downloads/bootleaf-master/assets/js/app.js",
+		"/Users/erikruthven/Downloads/bootleaf-master/assets/css/app.css",
+		"/Users/erikruthven/Documents/ruby_sandbox/strings.rb",
+		"/Users/erikruthven/Documents/ruby_sandbox/args.rb",
+		"/Users/erikruthven/Documents/oregon-brewery-locator/app/assets/stylesheets/leaflet.zoomdisplay.css",
+		"/Users/erikruthven/Desktop/beer.jpeg",
+		"/Users/erikruthven/Documents/oregon-brewery-locator/config/application.rb",
+		"/Users/erikruthven/Documents/oregon-brewery-locator/vendor/assets/stylesheets/bootstrap.min.css",
+		"/Users/erikruthven/Documents/oregon-brewery-locator/app/assets/stylesheets/leaflet/leaflet.css",
+		"/Users/erikruthven/Documents/oregon-brewery-locator/app/assets/javascripts/leaflet/leaflet.js",
+		"/Users/erikruthven/Documents/oregon-brewery-locator/app/assets/stylesheets/leaflet/leaflet.awesome-markers.css",
+		"/Users/erikruthven/Documents/oregon-brewery-locator/config/initializers/geocoder.rb",
+		"/Users/erikruthven/Documents/oregon-brewery-locator/db/migrate/20140515200546_update_brewery.rb",
+		"/Users/erikruthven/Documents/access-payment-portal/Gemfile",
+		"/Users/erikruthven/Documents/oregon-brewery-locator/app/controllers/map_controller.rb",
+		"/Users/erikruthven/Documents/oregon-brewery-locator/config/unicorn.rb",
+		"/Users/erikruthven/Documents/oregon-brewery-locator/config/environments/production.rb",
+		"/Users/erikruthven/Documents/oregon-brewery-locator/app/assets/javascripts/map.js",
+		"/Users/erikruthven/Documents/oregon-brewery-locator/config/initializers/mime_types.rb",
+		"/Users/erikruthven/Documents/oregon-brewery-locator/vendor/assets/javascripts/underscore-min.js",
+		"/Users/erikruthven/Documents/oregon-brewery-locator/.gitignore",
+		"/Users/erikruthven/Documents/oregon-brewery-locator/app/assets/javascripts/underscore-min.js",
+		"/Users/erikruthven/Documents/oregon-brewery-locator/config/initializers/timeout.rb",
+		"/Users/erikruthven/Documents/oregon-brewery-locator/config/database.yml",
+		"/Users/erikruthven/Documents/oregon-brewery-locator/config/initializers/secret_token.rb",
+		"/Users/erikruthven/Documents/oregon-brewery-locator/config/Procfile",
+		"/Users/erikruthven/Documents/oregon-brewery-locator/brewery_locator/config/database.yml",
+		"/Users/erikruthven/Documents/oregon-brewery-locator/brewery_locator/Gemfile",
+		"/Users/erikruthven/Documents/oregon-brewery-locator/brewery_locator/app/controllers/map_controller.rb",
+		"/Users/erikruthven/Documents/oregon-brewery-locator/brewery_locator/app/models/brewery.rb",
+		"/Users/erikruthven/Documents/oregon-brewery-locator/brewery_locator/config/routes.rb",
+		"/Users/erikruthven/Documents/oregon-brewery-locator/brewery_locator/app/views/breweries/index.html.erb",
+		"/Users/erikruthven/Documents/oregon-brewery-locator/brewery_locator/app/controllers/breweries_controller.rb",
+		"/Users/erikruthven/Documents/oregon-brewery-locator/brewery_locator/app/assets/javascripts/controllers/main/mapIndexCtrl.js",
+		"/Users/erikruthven/Documents/oregon-brewery-locator/brewery_locator/.gitignore",
+		"/Users/erikruthven/Documents/oregon-brewery-locator/brewery_locator/db/migrate/20140505015532_addlocationid.rb",
+		"/Users/erikruthven/Documents/oregon-brewery-locator/brewery_locator/db/migrate/20140505014828_add_location_id_to_breweries.rb",
+		"/Users/erikruthven/Documents/oregon-brewery-locator/brewery_locator/config/environment.rb",
+		"/Users/erikruthven/Documents/access-payment-portal/config/routes.rb",
+		"/Users/erikruthven/Documents/access-payment-portal/Rakefile",
+		"/Users/erikruthven/Documents/oregon-brewery-locator/brewery_locator/vendor/assets/javascripts/i18n/angular-locale_ar-ye.js",
+		"/Users/erikruthven/Documents/oregon-brewery-locator/brewery_locator/app/assets/javascripts/application.js",
+		"/Users/erikruthven/Documents/oregon-brewery-locator/brewery_locator/app/views/layouts/application.html.erb",
+		"/Users/erikruthven/Documents/oregon-brewery-locator/brewery_locator/app/views/map/index.html.erb",
+		"/Users/erikruthven/Documents/oregon-brewery-locator/brewery_locator/app/mapIndexCtrl.js.coffee",
+		"/Users/erikruthven/Documents/oregon-brewery-locator/brewery_locator/app/assets/javascripts/services/global/angular-geolocation-service.js",
+		"/Users/erikruthven/Documents/oregon-brewery-locator/brewery_locator/app/assets/javascripts/map.js.coffee",
+		"/Users/erikruthven/Documents/oregon-brewery-locator/brewery_locator/app/assets/stylesheets/application.css",
+		"/Users/erikruthven/Documents/oregon-brewery-locator/brewery_locator/app/assets/javascripts/controllers/main/mapIndexCtrl.js.coffee",
+		"/Users/erikruthven/Documents/oregon-brewery-locator/brewery_locator/app/assets/javascripts/directives/global/angularjs-geolocation.min.js",
+		"/Users/erikruthven/Library/Application Support/Sublime Text 3/Packages/Better CoffeeScript/CoffeeScript.sublime-settings",
+		"/Users/erikruthven/Library/Application Support/Sublime Text 3/Packages/User/CoffeeScript.sublime-settings",
+		"/Users/erikruthven/Dropbox/Code Samples/codechallenge/codechallenge/Gemfile.lock",
+		"/Users/erikruthven/Documents/access-payment-portal/Gemfile.lock",
+		"/Users/erikruthven/Dropbox/Code Samples/codechallenge/codechallenge/Gemfile",
+		"/Users/erikruthven/Documents/oregon-brewery-locator/brewery_locator/vendor/assets/javascripts/i18n/angular-locale_gu-in.js",
+		"/Users/erikruthven/Documents/access-payment-portal/.gitignore",
+		"/Users/erikruthven/Documents/ghost-custom-theme/assets/fonts/Vollkorn-Italic.otf",
+		"/Users/erikruthven/Documents/oregon-brewery-locator/brewery_locator/app/assets/javascripts/leaflet.js",
+		"/Users/erikruthven/Documents/oregon-brewery-locator/brewery_locator/app/views/breweries/_form.html.erb",
+		"/Users/erikruthven/Documents/oregon-brewery-locator/brewery_locator/app/assets/stylesheets/breweries.css.scss",
+		"/Users/erikruthven/Documents/oregon-brewery-locator/brewery_locator/app/views/breweries/new.html.erb",
+		"/Users/erikruthven/Documents/oregon-brewery-locator/brewery_locator/app/views/layouts/admin.html.erb",
+		"/Users/erikruthven/Documents/oregon-brewery-locator/brewery_locator/app/views/admin/index.html.erb",
+		"/Users/erikruthven/Documents/oregon-brewery-locator/brewery_locator/app/controllers/admin_controller.rb",
+		"/Users/erikruthven/Documents/access-payment-portal/app/views/admins/mailer/reset_password_instructions.html.erb",
+		"/Users/erikruthven/Documents/access-payment-portal/app/assets/javascripts/application.js",
+		"/Users/erikruthven/Documents/access-payment-portal/config/initializers/mime_types.rb",
+		"/Users/erikruthven/Documents/access-payment-portal/app/assets/javascripts/admin.js",
+		"/Users/erikruthven/Documents/access-payment-portal/app/views/admin/index.html.erb",
+		"/Users/erikruthven/Documents/access-payment-portal/app/controllers/parse_controller.rb",
+		"/Users/erikruthven/Dropbox/Code Samples/codechallenge/codechallenge/app/models/application.rb",
+		"/Users/erikruthven/Dropbox/Code Samples/codechallenge/codechallenge/config/application.rb",
+		"/Users/erikruthven/Documents/access-payment-portal/config/application.rb",
+		"/Users/erikruthven/Documents/access-payment-portal/db/migrate/20140420001338_add_file_to_parses.rb",
+		"/Users/erikruthven/Documents/access-payment-portal/db/schema.rb",
+		"/Users/erikruthven/Dropbox/Code Samples/codechallenge/codechallenge/app/models/parse.rb",
+		"/Users/erikruthven/Dropbox/Code Samples/codechallenge/codechallenge/app/uploaders/file_uploader.rb",
+		"/Users/erikruthven/Documents/access-payment-portal/app/models/parse.rb",
+		"/Users/erikruthven/Dropbox/Code Samples/codechallenge/codechallenge/app/controllers/parses_controller.rb",
+		"/Users/erikruthven/Documents/access-payment-portal/app/uploaders/csv_dump_uploader.rb",
+		"/Users/erikruthven/Documents/access-payment-portal/app/controllers/admin_controller.rb",
+		"/Users/erikruthven/Desktop/access-payment-portal/.gitignore",
+		"/Users/erikruthven/Desktop/access-payment-portal/log/development.log",
+		"/Users/erikruthven/Documents/ghost-custom-theme/default.hbs",
+		"/Users/erikruthven/Documents/ghost-custom-theme/index.hbs",
+		"/Users/erikruthven/Documents/ghost-custom-theme/assets/js/info.js",
+		"/Users/erikruthven/Documents/ghost-custom-theme/assets/js/readium-built.js",
+		"/Users/erikruthven/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/Users/erikruthven/Library/Application Support/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/Users/erikruthven/Documents/access-payment-portal/app/views/parse/index.html.erb",
+		"/Users/erikruthven/Library/Application Support/Sublime Text 3/Packages/BeautifyRuby/Default (OSX).sublime-keymap",
+		"/Users/erikruthven/Library/Application Support/Sublime Text 3/Packages/User/Default (OSX).sublime-keymap",
+		"/Users/erikruthven/Library/Application Support/Sublime Text 3/Packages/User/BeautifyRuby.sublime-settings",
+		"/Users/erikruthven/Library/Application Support/Sublime Text 3/Packages/Default/Default (OSX).sublime-keymap",
+		"/Users/erikruthven/Library/Application Support/Sublime Text 3/Packages/Cheat Sheets/cheat-sheets/Regular Expressions.cheatsheet",
+		"/Users/erikruthven/Library/Application Support/Sublime Text 3/Packages/Cheat Sheets/cheat-sheets/Git.cheatsheet",
+		"/Users/erikruthven/Documents/bookmarks/app/controllers/bookmarks_controller.rb",
+		"/Users/erikruthven/Documents/bookmarks/app/views/site/index.html.erb",
+		"/Users/erikruthven/Documents/bookmarks/app/models/bookmark.rb",
+		"/Users/erikruthven/Documents/bookmarks/app/views/bookmarks/show.html.erb",
+		"/Users/erikruthven/Documents/bookmarks/db/migrate/20140118080319_devise_create_users.rb",
+		"/Users/erikruthven/Documents/bookmarks/config/application.rb",
+		"/Users/erikruthven/Documents/bookmarks/app/views/layouts/application.html.erb",
+		"/Users/erikruthven/Documents/bookmarks/config/routes.rb",
+		"/Users/erikruthven/Documents/bookmarks/Gemfile",
+		"/Users/erikruthven/Documents/bookmarks/app/controllers/application_controller.rb",
+		"/Users/erikruthven/Documents/bookmarks/app/views/bookmarks/index.html.erb",
+		"/Users/erikruthven/Documents/bookmarks/app/views/bookmarks/_form.html.erb",
+		"/Users/erikruthven/Documents/bookmarks/app/controllers/site_controller.rb"
+	],
+	"find":
+	{
+		"height": 34.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+			"/Users/erikruthven/Downloads/bootleaf-master",
+			"/Users/erikruthven/Documents/ghost-custom-theme",
+			"<project>"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"modal",
+			"height",
+			" map",
+			"feature",
+			"click",
+			"load",
+			"loading",
+			"terrain",
+			"sidebar",
+			"toggle",
+			"map",
+			"font",
+			"markers",
+			"mar",
+			"glyphicon",
+			"image",
+			"fonts",
+			"woff",
+			"font",
+			"fonts",
+			"marisa",
+			"github",
+			"set_book",
+			"params",
+			"valor",
+			"Coluna",
+			"550px",
+			"songModelInstance",
+			"counter",
+			"todo",
+			"selected-song-list"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"row",
+			"Column"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "/Users/erikruthven/Documents/uno/partials/social.hbs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2306,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1381,
+								1381
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close"
+							],
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 486.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/Users/erikruthven/Documents/uno/default.hbs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2040,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1975,
+								1975
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close"
+							],
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 146.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 25.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"project": "uno_ghost_theme.sublime-project",
+	"replace":
+	{
+		"height": 46.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"gem",
+				"access-payment-portal/Gemfile"
+			],
+			[
+				"gitign",
+				"access-payment-portal/.gitignore"
+			],
+			[
+				"app",
+				"access-payment-portal/app/assets/javascripts/application.js"
+			],
+			[
+				"data",
+				"config/database.yml"
+			],
+			[
+				"inde",
+				"app/views/bookmarks/index.html.erb"
+			],
+			[
+				"site",
+				"app/controllers/site_controller.rb"
+			],
+			[
+				"rou",
+				"config/routes.rb"
+			],
+			[
+				"bookma",
+				"app/controllers/bookmarks_controller.rb"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+			[
+				"",
+				"~/Documents/oregon-brewery-locaotr.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 302.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

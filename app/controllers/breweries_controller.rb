@@ -5,11 +5,10 @@ class BreweriesController < ApplicationController
   # GET /breweries
   # GET /breweries.json
   def index
-    @breweries = Brewery.all
+    @breweries = Brewery.paginate(:page => params[:page],:per_page => 30)
+    # TODO change this to the current location from JS APi
     r = Brewery.near("3532 NE 6th Ave Portland, OR", 1)
-    puts r.to_s
     @withinTen = r.all
-    # puts r.all
   end
 
   # GET /breweries/1
@@ -77,8 +76,21 @@ class BreweriesController < ApplicationController
   end
 
   # check the state the user lat/long in 
-  def getCurrentUserState
+  def getCurrentUserState()
+    usersState = Brewery.getCurrentUserState(params[:lat],params[:long])
+    puts usersState
+    # reverse geolocate lat long and get users state
+    render json:{state: usersState}, status: 200
+  end
 
+  # set brewery to active / inactive 
+  # IDEA!.. could this just use the edit or update method above?...
+  def setBreweryActive()
+    # brewer_id and answer coming in from the ajax call
+    b = Brewery.find(params[:brewery_id])
+    b.is_active = params[:answer]
+    b.save
+    render :nothing => true, :status => 200
   end
 
   private

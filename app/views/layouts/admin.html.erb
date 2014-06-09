@@ -4,6 +4,7 @@
   <title>BreweryLocator</title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "breweries" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
@@ -22,17 +23,16 @@
 		<!-- Collect the nav links, forms, and other content for toggling -->
 		<div class="collapse navbar-collapse navbar-ex1-collapse">
 			<ul class="nav navbar-nav">
-				<li><a href="/admin/breweries">Breweries</a>
-				</li>
-				<li><a href="">Users</a>
-				</li></li>
+				<li><a href="/admin/breweries">Breweries</a></li>
+				<li><a href="">Users</a></li>
+				<li><a href="">Events</a></li>
 			</ul>
 		</div>
 		<!-- /.navbar-collapse -->
 	</div>
 	<!-- /.container -->
 </nav>
-<div style="padding-bottom:50px;"></div>
+<!-- <div style="padding-bottom:50px;"></div> -->
 
 <%= yield %>
 

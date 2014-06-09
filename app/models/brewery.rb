@@ -1,12 +1,14 @@
 require 'open-uri'
 
 class Brewery < ActiveRecord::Base
-	geocoded_by :address # address is an attribute of Brewery model
+	geocoded_by :address# address is an attribute of Brewery model
+	# reverse_geocoded_by :latitude, :longitude
 	# the callback to set longitude and latitude
   	after_validation :geocode
 
-  	# TODO import WA breweries that are close to OR border.   Should include Wa in the Gorge and in the couv.
+  	# TODO import WA breweries that are close to OR border ( maybe 50miles from border?).   Should include Wa in the Gorge and in the couv.
 	def self.importBreweriesFromAPI()
+		# GET OREGON BREWERIES
 		doc = Nokogiri::XML(open("http://beermapping.com/webservice/locstate/05a1a701dca974e16978f0c9027709b1/or"))
 		root = doc.root
 		items = root.xpath("//location")
@@ -31,6 +33,39 @@ class Brewery < ActiveRecord::Base
 				end
 			end
 		end
+
+		# GET WA BREWERIES
+		wadoc = Nokogiri::XML(open("http://beermapping.com/webservice/loccity/05a1a701dca974e16978f0c9027709b1/vancouver,wa"))
+		waroot = wadoc.root
+		waitems = waroot.xpath("//location")
+		waitems.each do |j|
+			if j.at_xpath("status").text == 'Brewpub' or j.at_xpath("status").text == 'Brewery' or j.at_xpath("status").text == 'Beer Bar'
+				counter += 1
+				wacoords = Nokogiri::XML(open("http://beermapping.com/webservice/locmap/05a1a701dca974e16978f0c9027709b1/#{j.at_xpath("id").text}"))
+				# update brewery
+				if Brewery.exists?(:location_id => j.at_xpath("id").text)
+					wb = Brewery.find_by(location_id: j.at_xpath("id").text)
+					wb.name = j.at_xpath("name").text
+					wb.lat = wacoords.xpath("//lat").text
+					wb.long = wacoords.xpath("//lng").text
+					wb.city = j.at_xpath("city").text
+					wb.address = j.at_xpath("street").text
+					wb.state = j.at_xpath("state").text
+					wb.save
+				# create brewery
+				else
+					Brewery.create({location_id: j.at_xpath("id").text,name: j.at_xpath("name").text,lat: wacoords.xpath("//lat").text,long: wacoords.xpath("//lng").text,city: j.at_xpath("city").text,address: j.at_xpath("street").text,state: j.at_xpath("state").text})
+				end
+			end
+		end
+
 		return counter.to_s
+	end
+
+	# parse the state from the users current lat and long
+	def self.getCurrentUserState(lat,long)
+		test = Geocoder.address([45.5331209,-122.6881353])
+		cityState = test.match('((?:\w|\s)+),\s(AL|AK|AS|AZ|AR|CA|CO|CT|DE|DC|FM|FL|GA|GU|HI|ID|IL|IN|IA|KS|KY|LA|ME|MH|MD|MA|MI|MN|MS|MO|MT|NE|NV|NH|NJ|NM|NY|NC|ND|MP|OH|OK|OR|PW|PA|PR|RI|SC|SD|TN|TX|UT|VT|VI|VA|WA|WV|WI|WY)')
+		return cityState.to_s.split(',')[1].strip
 	end
 end

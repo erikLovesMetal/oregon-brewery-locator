@@ -1,4 +1,3 @@
-
 <div class="container">
   <% if flash[:notice] -%>
     <p class='notice'><h2><%=h flash[:notice] %></h2></p>
@@ -7,29 +6,34 @@
         <div class="col-lg-12" >
             <div class="page-header">
                 <h1>Breweries (<%= @breweries.count %>)</h1>
+                <div class="row" style="a { color: #fff !important }">
+                  <span style="pull-right">
+                    <%= link_to 'New Brewery', new_brewery_path, :class => 'btn btn-success pull-right' %>&nbsp;&nbsp;&nbsp;
+                  </span>
+                  <span style="pull-right">
+                    <%= link_to 'API Import', import_breweries_api_path, :class => 'btn btn-success pull-right' %>
+                  </span>
+                  <span style="pull-right">
+                    <%= link_to 'Clear Breweries', '/admin/deleteBreweries', :class => 'btn btn-success pull-right',data: { confirm: 'Are you sure?'} %>
+                  </span>
+                </div>
             </div>
         </div>
     </div>
     <div class="row">
-        <span style="pull-right">
-          <%= link_to 'New Brewery', new_brewery_path, :class => 'btn btn-success pull-right' %>&nbsp;&nbsp;&nbsp;
-        </span>
-        <span style="pull-right">
-          <%= link_to 'API Import', import_breweries_api_path, :class => 'btn btn-success pull-right' %>
-        </span>
-        <span style="pull-right">
-          <%= link_to 'Clear Breweries', '/admin/deleteBreweries', :class => 'btn btn-success pull-right',data: { confirm: 'Are you sure?'} %>
-        </span>
-        <b> GEOLOCATION </b> Breweries within 1mile - <%=  @withinTen.count %>
+      <span style="padding-left:25px;">
+        <b> Breweries within 1 mile </b> &nbsp; <%=  @withinTen.count %>&nbsp;
         <% @withinTen.each do |r| %>
-          <%= r.name %>
+          <%= r.name %>,
         <% end %>
-    </div>
+      </span>
+    </div><br />
     <div class="row">
         <div class="col-lg-12">
             <table class="table" id="table">
                 <thead>
                     <tr>
+                        <th>Visible</th>
                         <th>Name</th>
                         <th>Address</th>
                         <th>Lat</th>
@@ -39,6 +43,26 @@
                 <tbody>
                   <% @breweries.each do |brewery| %>
                     <tr>
+                      <td style="width:100px;">
+                        <div class="btn-group btn-toggle"> 
+                          <button  
+                            <% if brewery.is_active? %>
+                              class="btn btn-sm btn-primary active"
+                            <%else%>
+                              class="btn btn-sm btn-default"
+                            <%end%>
+                            id="<%= brewery.id %>_true">ON
+                          </button>
+                          <button
+                            <% if brewery.is_active? %>
+                            class="btn btn-sm btn-default"
+                            <%else%>
+                              class="btn btn-sm btn-primary active"
+                            <%end%>
+                            id="<%= brewery.id %>_false">OFF
+                          </button>
+                        </div>
+                      </td>
                       <td><%= brewery.name %></td>
                       <td><%= brewery.address %> <%= brewery.city %>, <%= brewery.state %></td>
                       <td><%= brewery.lat %></td>
@@ -48,6 +72,7 @@
                       <td><%= link_to 'Destroy', brewery, method: :delete, data: { confirm: 'Are you sure?' } %></td>
                     </tr>
                   <% end %>
+                  <%= will_paginate @breweries %>
                 </tbody>
             </table>
         </div>

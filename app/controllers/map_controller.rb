@@ -5,7 +5,7 @@ class MapController < ApplicationController
 	end
 
 	def getBreweryMarkerCoords()
-		breweries = Brewery.all
+		breweries = Brewery.where(is_active:true).all
 		render :json => breweries.as_json
 	end
 end

@@ -20,6 +20,8 @@ BreweryLocator::Application.routes.draw do
   #   resources :products
   get 'admin' => 'admin#index'
   get 'import_breweries_api' => 'breweries#importBreweriesFromAPI'
+  post 'admin/setBreweryActive' => 'breweries#setBreweryActive'
+  get 'admin/getCurrentUserState' => 'breweries#getCurrentUserState'
   # Example resource route with options:
   #   resources :products do
   #     member do

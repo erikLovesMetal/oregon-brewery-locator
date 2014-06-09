@@ -46,6 +46,8 @@ gem 'geocoder'
 
 gem "font-awesome-rails"
 
+gem 'will_paginate', '~> 3.0'
+
 # ruby "2.1.1", group: :production
 
 # Use ActiveModel has_secure_password
