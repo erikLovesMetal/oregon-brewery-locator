@@ -11,13 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140602062633) do
+ActiveRecord::Schema.define(version: 20140612064042) do
 
   create_table "breweries", force: true do |t|
     t.string   "name"
     t.text     "notes"
-    t.string   "lat"
-    t.string   "long"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "location_id"

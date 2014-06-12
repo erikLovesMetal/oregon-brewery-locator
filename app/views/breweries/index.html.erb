@@ -65,8 +65,8 @@
                       </td>
                       <td><%= brewery.name %></td>
                       <td><%= brewery.address %> <%= brewery.city %>, <%= brewery.state %></td>
-                      <td><%= brewery.lat %></td>
-                      <td><%= brewery.long %></td>
+                      <td><%= brewery.latitude %></td>
+                      <td><%= brewery.longitude %></td>
                       <td><%= link_to 'Show', brewery %></td>
                       <td><%= link_to 'Edit', edit_brewery_path(brewery) %></td>
                       <td><%= link_to 'Destroy', brewery, method: :delete, data: { confirm: 'Are you sure?' } %></td>
