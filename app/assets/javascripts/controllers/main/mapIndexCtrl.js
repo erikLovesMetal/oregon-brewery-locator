@@ -94,7 +94,6 @@ app.controller('IndexCtrl', ['$scope','$http','leafletData','GeolocationService'
         $scope.results['m' + index]={lat:parseFloat(this.latitude),lng: parseFloat(this.longitude),message: this.name};
         // }
       });
-      console.log($scope.results);
     }).
     error(function(data, status, headers, config) {
       // called asynchronously if an error occurs
