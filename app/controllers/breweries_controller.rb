@@ -1,5 +1,6 @@
 class BreweriesController < ApplicationController
   before_action :set_brewery, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, :except => :getCurrentUserState
   layout "admin"
 
   # GET /breweries

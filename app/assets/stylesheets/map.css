@@ -109,6 +109,7 @@ input[type="radio"], input[type="checkbox"] {
 .leaflet-sidebar {
   z-index: 1020;
 }
+
 .leaflet-sidebar .close {
   right: 0px;
   top: 5px;
