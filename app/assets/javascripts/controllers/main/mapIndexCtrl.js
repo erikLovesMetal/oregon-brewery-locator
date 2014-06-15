@@ -65,7 +65,7 @@ app.controller('IndexCtrl', ['$scope','$http','leafletData','GeolocationService'
     // console.log($scope.centerPoint.lat);
     // console.log($scope.centerPoint.lng);
     // add marker for our current location
-    //$scope.results['x']={lat:parseFloat($scope.centerPoint.lat),lng: parseFloat($scope.centerPoint.lng),message: "You Are Here",focus:true};
+    $scope.results['x']={lat:parseFloat($scope.centerPoint.lat),lng: parseFloat($scope.centerPoint.lng),message: "You Are Here",focus:true};
   });
 
   $scope.events = {
@@ -107,9 +107,11 @@ app.controller('IndexCtrl', ['$scope','$http','leafletData','GeolocationService'
       // when the response is available
       $(data).each(function(index){
         // console.log(this);
-        if( this.latitude != 0.0 && this.longitude != 0.0){
-          $scope.results['m' + index]={lat:parseFloat(this.latitude),lng: parseFloat(this.longitude),message: this.name};
-        }
+        // if( this.latitude != 0.0 && this.longitude != 0.0){
+        console.log(this);
+        $scope.results['m' + index]={lat:parseFloat(this.latitude),lng: parseFloat(this.longitude),message: this.name};
+        
+        // }
       });
     }).
     error(function(data, status, headers, config) {
