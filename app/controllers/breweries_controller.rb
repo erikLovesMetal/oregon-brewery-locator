@@ -79,7 +79,6 @@ class BreweriesController < ApplicationController
   # check the state the user lat/long in 
   def getCurrentUserState()
     usersState = Brewery.getCurrentUserState(params[:lat],params[:long])
-    puts usersState
     # reverse geolocate lat long and get users state
     render json:{state: usersState}, status: 200
   end
