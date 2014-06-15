@@ -4,7 +4,7 @@ class Brewery < ActiveRecord::Base
 	geocoded_by :address_city_state # address is an attribute of Brewery model
 	# reverse_geocoded_by :latitude, :longitude
 	# the callback to set longitude and latitude
-  	after_validation :geocode,if: ->(brewery){ brewery.address.present? and brewery.address_changed? }
+  	after_validation :geocode
   	# if: ->(brewery){ brewery.address.present? and brewery.address_changed? }
 
   	# geocode by all 3
