@@ -62,8 +62,8 @@ app.controller('IndexCtrl', ['$scope','$http','leafletData','GeolocationService'
         alert('Failed: ' + reason);
       }
      );
-    console.log($scope.centerPoint.lat);
-    console.log($scope.centerPoint.lng);
+    // console.log($scope.centerPoint.lat);
+    // console.log($scope.centerPoint.lng);
     // add marker for our current location
     $scope.results['x']={lat:parseFloat($scope.centerPoint.lat),lng: parseFloat($scope.centerPoint.lng),message: "You Are Here",focus:true};
   });
