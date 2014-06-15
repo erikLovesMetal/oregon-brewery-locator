@@ -4,7 +4,8 @@ class Brewery < ActiveRecord::Base
 	geocoded_by :address_city_state # address is an attribute of Brewery model
 	# reverse_geocoded_by :latitude, :longitude
 	# the callback to set longitude and latitude
-  	after_validation :geocode
+  	after_validation :geocode,if: ->(brewery){ !brewery.latitude.present? or !brewery.longitude.present?}
+  	 # :if => lambda{ |obj| obj.address_changed? }
   	# if: ->(brewery){ brewery.address.present? and brewery.address_changed? }
 
   	# geocode by all 3
@@ -72,9 +73,8 @@ class Brewery < ActiveRecord::Base
 
 	# parse the state from the users current lat and long
 	def self.getCurrentUserState(lat,long)
-		# location = Geocoder.address([lat,long])
-		# cityState = location.match('((?:\w|\s)+),\s(AL|AK|AS|AZ|AR|CA|CO|CT|DE|DC|FM|FL|GA|GU|HI|ID|IL|IN|IA|KS|KY|LA|ME|MH|MD|MA|MI|MN|MS|MO|MT|NE|NV|NH|NJ|NM|NY|NC|ND|MP|OH|OK|OR|PW|PA|PR|RI|SC|SD|TN|TX|UT|VT|VI|VA|WA|WV|WI|WY)')
-		# return cityState.to_s.split(',')[1].strip
-		return 'OR'
+		location = Geocoder.address([lat,long])
+		cityState = location.match('((?:\w|\s)+),\s(AL|AK|AS|AZ|AR|CA|CO|CT|DE|DC|FM|FL|GA|GU|HI|ID|IL|IN|IA|KS|KY|LA|ME|MH|MD|MA|MI|MN|MS|MO|MT|NE|NV|NH|NJ|NM|NY|NC|ND|MP|OH|OK|OR|PW|PA|PR|RI|SC|SD|TN|TX|UT|VT|VI|VA|WA|WV|WI|WY)')
+		return cityState.to_s.split(',')[1].strip
 	end
 end
