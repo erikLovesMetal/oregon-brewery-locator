@@ -3,6 +3,8 @@ oregon-brewery-locator
 
 Mapping app that takes current location and maps breweries in vicinity.  Breweris are managed in a login protected admin section with a tool that allows managing the breweries and their lat/longs and information about them. The admin tool has import feature that imports most the breweries into the admin tool.  Also using geocoding to look up lat/longs of breweries that arent in beermapping API.  Can also manually add breweries.
 
+Heroku URL: http://oregon-brewery-locator.herokuapp.com/
+
 * Ruby v2.0 / Rails 4
 
 * beermapping api (http://beermapping.com/api/) doesnt seem to have them all
