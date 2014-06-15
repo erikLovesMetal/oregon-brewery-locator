@@ -75,7 +75,24 @@ app.controller('IndexCtrl', ['$scope','$http','leafletData','GeolocationService'
     }
   };
 
+  // click handler brewery in sidebar
+  $scope.showBrewery = function(b) {
+    $.each($scope.results,function(i){
+      if($scope.results[i].lat == b.lat && $scope.results[i].lng == b.lng){
+        $scope.results[i].focus = true;
+        // console.log($scope.results[i]);
+      }
+    });
+
+    //center/zoom on the clicked brewery in sidebar
+    $scope.centerPoint.lat = b.lat;
+    $scope.centerPoint.lng = b.lng;
+    $scope.centerPoint.zoom = 20;
+
+  };
+
   // add listeners for specific markers click event then open populated modal
+  // TODO REFACTOR THIS HTML OUT
   $scope.$on('leafletDirectiveMarker.click',function(event,args){
     var content = "<table class='table table-striped table-bordered table-condensed'>" + "<tr><th>Name</th><td>" + $scope.markers[args.markerName].message + "</td></tr>" + "<tr><th>Address</th><td>" + $scope.markers[args.markerName].message + "</td></tr>" + "<table>";
     $("#feature-title").html($scope.markers[args.markerName].message);
@@ -90,9 +107,9 @@ app.controller('IndexCtrl', ['$scope','$http','leafletData','GeolocationService'
       // when the response is available
       $(data).each(function(index){
         // console.log(this);
-        // if( this.lat != 0.0 && this.long != 0.0){
-        $scope.results['m' + index]={lat:parseFloat(this.latitude),lng: parseFloat(this.longitude),message: this.name};
-        // }
+        if( this.latitude != 0.0 && this.longitude != 0.0){
+          $scope.results['m' + index]={lat:parseFloat(this.latitude),lng: parseFloat(this.longitude),message: this.name};
+        }
       });
     }).
     error(function(data, status, headers, config) {

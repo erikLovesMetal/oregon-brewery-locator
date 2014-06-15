@@ -32,7 +32,7 @@
 	    <div id="sidebar">
 	      <h2>Breweries </h2>
 	      	<ul ng-repeat="b in results | orderBy:'name'">
-	      	<li>{{b.message}}</li>
+	      	<li ng-click="showBrewery(b)">{{b.message}}</li>
 	      	</ul>
 	      </p>
 	    </div>

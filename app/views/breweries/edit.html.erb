@@ -1,6 +1,7 @@
-<h1>Editing brewery</h1>
+<div style="padding-left:25px;padding-bottom:50px;">
+	<h1>Editing <%= @brewery.name %></h1>
+	<%= render 'form' %>
 
-<%= render 'form' %>
-
-<%= link_to 'Show', @brewery %> |
-<%= link_to 'Back', breweries_path %>
+	<%= link_to 'Show', @brewery, :class => 'btn btn-success pull-left' %>
+	<%= link_to 'Back', breweries_path, :class => 'btn btn-success pull-left' %>
+</div>

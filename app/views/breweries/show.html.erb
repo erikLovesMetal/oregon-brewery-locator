@@ -1,24 +1,31 @@
 <p id="notice"><%= notice %></p>
-
 <p>
   <strong>Name:</strong>
   <%= @brewery.name %>
 </p>
-
+<p>
+  <strong>Address:</strong>
+  <%= @brewery.address %>
+</p>
+<p>
+  <strong>City:</strong>
+  <%= @brewery.city %>
+</p>
+<p>
+  <strong>State:</strong>
+  <%= @brewery.state %>
+</p>
 <p>
   <strong>Notes:</strong>
   <%= @brewery.notes %>
 </p>
-
 <p>
   <strong>Lat:</strong>
-  <%= @brewery.lat %>
+  <%= @brewery.latitude %>
 </p>
-
 <p>
   <strong>Long:</strong>
-  <%= @brewery.long %>
+  <%= @brewery.longitude %>
 </p>
-
-<%= link_to 'Edit', edit_brewery_path(@brewery) %> |
-<%= link_to 'Back', breweries_path %>
+<%= link_to 'Edit', edit_brewery_path(@brewery),:class => 'btn btn-success pull-left' %>
+<%= link_to 'Back', breweries_path,:class => 'btn btn-success pull-left' %>

@@ -1,16 +1,15 @@
 require 'open-uri'
 
 class Brewery < ActiveRecord::Base
-	geocoded_by :address # address is an attribute of Brewery model
+	geocoded_by :address_city_state # address is an attribute of Brewery model
 	# reverse_geocoded_by :latitude, :longitude
 	# the callback to set longitude and latitude
-  	after_validation :geocode
+  	after_validation :geocode,if: ->(brewery){ brewery.address.present? and brewery.address_changed? }
   	# if: ->(brewery){ brewery.address.present? and brewery.address_changed? }
 
+  	# geocode by all 3
   	def address_city_state
-  		self.address
-  		self.city
-  		self.state
+  		self.address + ' ' + self.city + ', ' + self.state
 	end
 
   	# TODO import WA breweries that are close to OR border ( maybe 50miles from border?).   Should include Wa in the Gorge and in the couv.
