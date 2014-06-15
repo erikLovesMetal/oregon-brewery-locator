@@ -3,7 +3,7 @@ Geocoder.configure(
   # lookup: :google,
 
   lookup: :geocoder_ca,
-  :http_proxy => ENV['QUOTAGUARD_URL'],
+  # :http_proxy => ENV['QUOTAGUARD_URL'],
   # :timeout => 50,
 
   # geocoding service request timeout (in seconds)
