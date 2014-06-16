@@ -5,20 +5,20 @@ Mapping app that takes current location and maps breweries in vicinity.  Breweri
 
 Heroku URL: http://oregon-brewery-locator.herokuapp.com/
 
-* Ruby v2.0 / Rails 4
+* Ruby v2.1 / Rails 4
 
-* beermapping api (http://beermapping.com/api/) doesnt seem to have them all
+* beermapping api (http://beermapping.com/api/) (doesnt have them all)
 
-* Ruby geocoder gem (https://github.com/alexreisner/geocoder) for reverse geocoding
+* Ruby geocoder gem (https://github.com/alexreisner/geocoder) for geocoding
 
 * Sqlite locally / PostGresSQL production
 
+* AngularJS  w/ leaflet.JS directive map
+
+* Bootleaf theme for Leaflet Map
+
+* Devise for admin tool security
+
+* TODO
+
 * Add TDD ..
-
-* AngularJS (try and find excuse to use..) with leaflet.JS directive
-
-* Deployed to Heroku
-
-* make the map responsive so it works on mobile USING LEAFLET.JS!!!!
-
-* Theme the map with Bootleaf theme
