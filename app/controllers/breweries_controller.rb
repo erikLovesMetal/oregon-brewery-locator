@@ -8,12 +8,11 @@ class BreweriesController < ApplicationController
   def index
     @breweries = Brewery.order(name: :asc).paginate(:page => params[:page],:per_page => 30)
     # TODO change this to the current location from JS APi
-    r = Brewery.near("3532 NE 6th Ave Portland, OR", 1)
+    r = Brewery.near([request.location.latitude,request.location.longitude], 1)
     @withinTen = r.all
-    puts "below"
-    puts request.location.latitude
-    puts request.location.longitude
-
+    # puts "below"
+    # puts request.location.latitude
+    # puts request.location.longitude
   end
 
   # GET /breweries/1
