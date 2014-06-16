@@ -11,7 +11,9 @@ class BreweriesController < ApplicationController
     r = Brewery.near("3532 NE 6th Ave Portland, OR", 1)
     @withinTen = r.all
     puts "below"
-    puts request.location.city
+    puts request.location.latitude
+    puts request.location.longitude
+
   end
 
   # GET /breweries/1
