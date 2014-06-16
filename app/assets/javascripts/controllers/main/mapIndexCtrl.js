@@ -94,7 +94,11 @@ app.controller('IndexCtrl', ['$scope','$http','leafletData','GeolocationService'
   // add listeners for specific markers click event then open populated modal
   // TODO REFACTOR THIS HTML OUT
   $scope.$on('leafletDirectiveMarker.click',function(event,args){
-    var content = "<table class='table table-striped table-bordered table-condensed'>" + "<tr><th>Name</th><td>" + $scope.markers[args.markerName].message + "</td></tr>" + "<tr><th>Address</th><td>" + $scope.markers[args.markerName].message + "</td></tr>" + "<table>";
+    var content = "<table class='table table-striped table-bordered table-condensed'>" + 
+                  "<tr><th>Name</th><td>" + $scope.markers[args.markerName].message + 
+                  "</td></tr>" + "<tr><th>Address</th><td>" + $scope.markers[args.markerName].address + 
+                  "</tr></td><tr><th>City/State</th><td>" + $scope.markers[args.markerName].city + ' ' + $scope.markers[args.markerName].state + 
+                  "</td></tr>" + "<tr><th>Notes</th><td>" + $scope.markers[args.markerName].notes + "</td></tr>" + "<table>";
     $("#feature-title").html($scope.markers[args.markerName].message);
     $("#feature-info").html(content);
     $("#featureModal").modal("show");
@@ -108,7 +112,7 @@ app.controller('IndexCtrl', ['$scope','$http','leafletData','GeolocationService'
       $(data).each(function(index){
         // console.log(this);
         if((this.latitude != 0.0 && this.longitude != 0.0) && (this.latitude != null && this.longitude != null)){
-          $scope.results['m' + index]={lat:parseFloat(this.latitude),lng: parseFloat(this.longitude),message: this.name};
+          $scope.results['m' + index]={lat:parseFloat(this.latitude),lng: parseFloat(this.longitude),message: this.name,address:this.address,city:this.city,state:this.state,notes:this.notes};
         }
       });
     }).

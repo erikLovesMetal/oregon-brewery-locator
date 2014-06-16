@@ -116,9 +116,9 @@ input[type="radio"], input[type="checkbox"] {
   background: transparent;
 }
 
-#contact-form{
+/*#contact-form{
   width: 60%;
-}
+}*/
 
 @media (max-width: 992px) {
   .navbar .navbar-brand {
