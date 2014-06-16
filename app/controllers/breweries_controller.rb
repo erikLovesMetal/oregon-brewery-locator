@@ -10,7 +10,8 @@ class BreweriesController < ApplicationController
     # TODO change this to the current location from JS APi
     r = Brewery.near("3532 NE 6th Ave Portland, OR", 1)
     @withinTen = r.all
-    # puts request.location.to_yaml
+    puts "below"
+    puts request.location.city
   end
 
   # GET /breweries/1
