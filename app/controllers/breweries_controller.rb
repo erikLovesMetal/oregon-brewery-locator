@@ -8,11 +8,9 @@ class BreweriesController < ApplicationController
   def index
     @breweries = Brewery.order(name: :asc).paginate(:page => params[:page],:per_page => 30)
     # TODO change this to the current location from JS APi
-    r = Brewery.near([request.location.latitude,request.location.longitude], 1)
-    @withinTen = r.all
-    # puts "below"
-    # puts request.location.latitude
-    # puts request.location.longitude
+    # r = Brewery.near([request.location.latitude,request.location.longitude], 1,:order => :distance)
+    # @withinTen = r.all
+    @withinTen = {}
   end
 
   # GET /breweries/1
@@ -32,13 +30,18 @@ class BreweriesController < ApplicationController
   # POST /breweries
   # POST /breweries.json
   def create
+    puts "this is create"
+    puts brewery_params
     @brewery = Brewery.new(brewery_params)
-
+    puts "in save"
+    puts @brewery.to_yaml
     respond_to do |format|
       if @brewery.save
+        puts "saved"
         format.html { redirect_to @brewery, notice: 'Brewery was successfully created.' }
         format.json { render action: 'show', status: :created, location: @brewery }
       else
+        puts "didnt save"
         format.html { render action: 'new' }
         format.json { render json: @brewery.errors, status: :unprocessable_entity }
       end
@@ -104,6 +107,7 @@ class BreweriesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def brewery_params
-      params.require(:brewery).permit(:name, :notes, :lat, :long)
+      params.require(:brewery).permit(:name, :address,:city,:state,:notes, :lat, :long) if params[:brewery] else params.permit(:name, :address,:city,:state,:notes, :latitude, :longitude)
+      # params.permit(:name, :address,:city,:state,:notes, :latitude, :longitude)
     end
 end

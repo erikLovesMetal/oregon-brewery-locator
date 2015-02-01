@@ -11,6 +11,10 @@
 #= require_tree ./directives/global
 #= require_tree ./directives/main
 
+app.config ($httpProvider) ->
+  authToken = $("meta[name=\"csrf-token\"]").attr("content")
+  $httpProvider.defaults.headers.common["X-CSRF-TOKEN"] = authToken
+
 
 
 

@@ -8,6 +8,9 @@
                 <h1>Breweries (<%= @breweries.count %>)</h1>
                 <div class="row" style="a { color: #fff !important }">
                   <span style="pull-right">
+                    <%= link_to 'Pending', new_brewery_path, :class => 'btn btn-success pull-right' %>&nbsp;&nbsp;&nbsp;
+                  </span>
+                  <span style="pull-right">
                     <%= link_to 'New Brewery', new_brewery_path, :class => 'btn btn-success pull-right' %>&nbsp;&nbsp;&nbsp;
                   </span>
                   <span style="pull-right">

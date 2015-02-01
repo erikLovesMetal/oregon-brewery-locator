@@ -1,9 +1,33 @@
 app.controller('IndexCtrl', ['$scope','$http','leafletData','GeolocationService','leafletEvents','$q', function ($scope,$http,leafletData,geolocation,leafletEvents,$q) {
   $scope.position = null;
-  $scope.message = "Determining gelocation...";
   $scope.results = {};
+  $scope.brewery = {};
   // TODO .. ADD A SPINNER/LOADING ICON WHILE LOADING GEOLOCATION
   // NOTE GEOLOCATION SERVICE BEING INJECTED.. BUT NOT USED... LEAFLET WILL AUTODISCOVER IT!
+
+  // process the add brewery form form
+  $scope.processForm = function() {
+    console.log($.param($scope.brewery));
+    $http({
+        method  : 'POST',
+        url     : '/admin/breweries.json',
+        data    : $.param($scope.brewery),  // pass in data as strings
+        headers : { 'Content-Type': 'application/x-www-form-urlencoded' }  // set the headers so angular passing info as form data (not request payload)
+    }).success(function(data) {
+        console.log(data);
+        // if (!data.success) {
+        //   console.log('error');
+        //   console.log(data);
+        //   // if not successful, bind errors to error variables
+        //     // $scope.errorName = data.errors.name;
+        //     // $scope.errorSuperhero = data.errors.superheroAlias;
+        // } else {
+        //   // if successful, bind success message to message
+        //     console.log('success');
+        //     $scope.message = data.message;
+        // }
+    });
+  };
 
   function getUsersState(){
     var deferred = $q.defer();

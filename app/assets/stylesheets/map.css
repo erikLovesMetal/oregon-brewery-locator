@@ -143,8 +143,6 @@ input[type="radio"], input[type="checkbox"] {
   }
 }
 
-/*.angular-leaflet-map {
-  height: 100%;
-  overflow: hidden;
+#sidebar li{
+  cursor: pointer;
 }
-*/
